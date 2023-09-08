@@ -1,0 +1,51 @@
+version: '3'
+
+services:
+  db:
+    container_name: db_challenge
+    image: mysql
+    
+    volumes:
+      - $PWD/docker/db/scripts/:/docker-entrypoint-initdb.d
+      - db-challenge_db:/var/lib/mysql
+    command: --default-authentication-plugin=mysql_native_password
+
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: db_challenge
+
+    ports:
+      - "3306:3306"
+
+  web:
+    container_name: challenge_web
+    depends_on:
+      - db
+    build:
+      context: $PWD/docker/web/.
+
+    volumes:
+      - $PWD/src:/var/www/html
+      - $PWD/docker/web/apache/virtualhost.conf:/etc/apache2/sites-enabled/000-default.conf
+      - $PWD/docker/web/php/php.ini:/usr/local/etc/php/php.ini
+    ports:
+      - "80:80"
+
+  phpmyadmin:
+    container_name: challenge_phpmyadmin
+    image: phpmyadmin/phpmyadmin
+
+    links:
+      - db
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOSTS=db
+      - PMA_USER=root
+      - PMA_PASSWORD=123456
+      - MYSQL_ROOT_PASSWORD=123456
+    # restart: always
+    ports:
+      - 8080:80
+
+volumes:
+  db-challenge_db:
