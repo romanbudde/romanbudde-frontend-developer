@@ -1,0 +1,1 @@
+{"version":3,"file":"./style-index.css","mappings":";;;AAAA;IACI,gCAAgC;IAChC,aAAa;IACb,YAAY;AAChB,C","sources":["webpack://custom-plugin/./css/style.css"],"sourcesContent":[".show-rocket-info-btn {\n    background-color: red !important;\n    padding: 20px;\n    border: none;\n}"],"names":[],"sourceRoot":""}

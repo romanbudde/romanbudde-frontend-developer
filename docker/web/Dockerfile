@@ -2,7 +2,7 @@ FROM php:7.4-apache
 
 RUN apt-get update \
 && apt-get install -y apt-utils vim curl sqlite3 mc \
-&& pecl install xdebug
+&& pecl install xdebug-3.1.6
 
 # PHP extensions
 RUN \
