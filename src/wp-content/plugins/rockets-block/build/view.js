@@ -2714,7 +2714,7 @@ const Paginate = ({
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", {
     className: "pagination flex flex-row justify-evenly items-center"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
-    className: `${currentPage === 1 ? 'left-5 text-lg opacity-25' : 'left-5 text-lg'} cursor-pointer`,
+    className: `${currentPage === 1 ? "left-5 text-lg opacity-25" : "left-5 text-lg"} cursor-pointer`,
     icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__.faChevronLeft,
     onClick: handlePreviousPage
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
@@ -2722,7 +2722,7 @@ const Paginate = ({
   }, amountOfPages > 3 && currentPage > 2 && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_1__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", {
     key: 1,
     onClick: () => paginate(1),
-    className: `page-number px-3 py-1 rounded-md ${1 === currentPage ? 'bg-blue-200' : ''} hover:cursor-pointer hover:bg-blue-100`
+    className: `page-number px-3 py-1 rounded-md ${1 === currentPage ? "bg-blue-200" : ""} hover:cursor-pointer hover:bg-blue-100`
   }, "1"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
     className: "mt-auto"
   }, "..."))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
@@ -2730,7 +2730,7 @@ const Paginate = ({
   }, pageNumbers.map(number => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", {
     key: number,
     onClick: () => paginate(number),
-    className: `page-number px-3 py-1 rounded-md ${number === currentPage ? 'bg-blue-200' : ''} hover:cursor-pointer hover:bg-blue-100`
+    className: `page-number px-3 py-1 rounded-md ${number === currentPage ? "bg-blue-200" : ""} hover:cursor-pointer hover:bg-blue-100`
   }, number))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "flex flex-row w-1/4"
   }, amountOfPages > 3 && currentPage < amountOfPages - 1 && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_1__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
@@ -2740,9 +2740,9 @@ const Paginate = ({
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", {
     key: lastPage,
     onClick: () => paginate(lastPage),
-    className: `page-number px-3 py-1 rounded-md ${lastPage === currentPage ? 'bg-blue-200' : ''} hover:cursor-pointer hover:bg-blue-100`
+    className: `page-number px-3 py-1 rounded-md ${lastPage === currentPage ? "bg-blue-200" : ""} hover:cursor-pointer hover:bg-blue-100`
   }, lastPage)))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
-    className: `${currentPage === lastPage ? 'right-5 text-lg opacity-25' : 'right-5 text-lg'} cursor-pointer`,
+    className: `${currentPage === lastPage ? "right-5 text-lg opacity-25" : "right-5 text-lg"} cursor-pointer`,
     icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__.faChevronRight,
     onClick: handleNextPage
   }))));
@@ -2772,11 +2772,11 @@ __webpack_require__.r(__webpack_exports__);
 const RocketCard = ({
   rocket
 }) => {
-  console.log('inside rocket card - rocket: ', rocket.name);
+  console.log("inside rocket card - rocket: ", rocket.name);
   const [showEditModal, setShowEditModal] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
   const handleShow = () => setShowEditModal(true);
   const handleClose = () => {
-    console.log('----------- HANDLE CLOSE() -----------');
+    console.log("----------- HANDLE CLOSE() -----------");
     setShowEditModal(false);
   };
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_1__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
@@ -2824,8 +2824,8 @@ const RocketModal = ({
   onClose,
   rocket
 }) => {
-  console.log('inside rocket modal');
-  console.log('rocket clicked: ', rocket);
+  console.log("inside rocket modal");
+  console.log("rocket clicked: ", rocket);
   if (!show) return null;
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_1__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "fixed inset-0 bg-gray-500 bg-opacity-50 z-50 flex justify-center items-center shadow-lg"
@@ -2841,33 +2841,33 @@ const RocketModal = ({
     className: "text-lg font-semibold mb-3"
   }, rocket.name)), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "flex flex-row gap-1"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Active', 'rockets-block'), ":"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
-    className: `${rocket.active === false ? 'text-red-500' : 'text-green-600'} font-semibold`
-  }, rocket.active === false ? 'No' : 'Yes')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)("Active", "rockets-block"), ":"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+    className: `${rocket.active === false ? "text-red-500" : "text-green-600"} font-semibold`
+  }, rocket.active === false ? "No" : "Yes")), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "flex flex-row gap-1"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
     className: "font-semibold"
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Company', 'rockets-block'), ":"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, rocket.company)), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)("Company", "rockets-block"), ":"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, rocket.company)), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "flex flex-row gap-1"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
     className: "font-semibold"
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Country', 'rockets-block'), ":"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, rocket.country)), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)("Country", "rockets-block"), ":"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, rocket.country)), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "flex flex-row gap-1"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
     className: "font-semibold"
-  }, rocket.boosters), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('boosters', 'rockets-block'))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  }, rocket.boosters), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)("boosters", "rockets-block"))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "flex flex-row gap-1"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Cost per launch', 'rockets-block'), ": "), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)("Cost per launch", "rockets-block"), ": "), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
     className: "font-semibold"
-  }, "$", rocket.cost_per_launch.toLocaleString('en-US'), " USD")), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+  }, "$", rocket.cost_per_launch.toLocaleString("en-US"), " USD")), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
     className: "font-semibold text-md"
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Description', 'rockets-block'), ":"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)("Description", "rockets-block"), ":"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
     className: "text-md"
   }, rocket.description), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "flex-column"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
     className: "font-semibold"
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Diameter', 'rockets-block'), ":"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, rocket.diameter.feet, " ", (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('feet', 'rockets-block')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, rocket.diameter.meters, " ", (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('meters', 'rockets-block'))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)("Diameter", "rockets-block"), ":"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, rocket.diameter.feet, " ", (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)("feet", "rockets-block")), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, rocket.diameter.meters, " ", (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)("meters", "rockets-block"))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "flex flex-row gap-1"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
     className: "font-semibold"
@@ -27100,8 +27100,9 @@ __webpack_require__.r(__webpack_exports__);
 const App = () => {
   const [rockets, setRockets] = (0,react__WEBPACK_IMPORTED_MODULE_4__.useState)([]);
   const [displayedRockets, setDisplayedRockets] = (0,react__WEBPACK_IMPORTED_MODULE_4__.useState)([]);
-  const [dateFilter, setDateFilter] = (0,react__WEBPACK_IMPORTED_MODULE_4__.useState)('newest');
-  const [statusFilter, setStatusFilter] = (0,react__WEBPACK_IMPORTED_MODULE_4__.useState)('all');
+  const [dateFilter, setDateFilter] = (0,react__WEBPACK_IMPORTED_MODULE_4__.useState)("newest");
+  const [statusFilter, setStatusFilter] = (0,react__WEBPACK_IMPORTED_MODULE_4__.useState)("all");
+  const [userLoggedIn, setUserLoggedIn] = (0,react__WEBPACK_IMPORTED_MODULE_4__.useState)(true);
   const [currentPage, setCurrentPage] = (0,react__WEBPACK_IMPORTED_MODULE_4__.useState)(1);
   const [postsPerPage] = (0,react__WEBPACK_IMPORTED_MODULE_4__.useState)(2);
   const indexOfLastPost = currentPage * postsPerPage;
@@ -27111,135 +27112,145 @@ const App = () => {
     setCurrentPage(pageNumber);
   };
   const optionsLaunchDate = [{
-    value: 'newest',
-    label: 'Newest'
+    value: "newest",
+    label: "Newest"
   }, {
-    value: 'oldest',
-    label: 'Oldest'
+    value: "oldest",
+    label: "Oldest"
   }];
   const optionsStatus = [{
-    value: 'active',
-    label: 'Active'
+    value: "active",
+    label: "Active"
   }, {
-    value: 'inactive',
-    label: 'Inactive'
+    value: "inactive",
+    label: "Inactive"
   }, {
-    value: 'all',
-    label: 'All'
+    value: "all",
+    label: "All"
   }];
   const handleDateFilterChange = e => {
     setDateFilter(e.value);
-    sortRockets(e.value, '');
+    sortRockets(e.value, "");
     setCurrentPage(1);
   };
   const handleStatusFilterChange = e => {
     setStatusFilter(e.value);
-    sortRockets('', e.value);
+    sortRockets("", e.value);
     setCurrentPage(1);
   };
   const sortRockets = (date, status) => {
-    console.log('dateFilter: ', date);
-    console.log('statusFilter: ', status);
+    console.log("dateFilter: ", date);
+    console.log("statusFilter: ", status);
     let rocketsFiltered = [];
-    if (status !== '') {
-      if (dateFilter === 'newest') {
+    if (status !== "") {
+      if (dateFilter === "newest") {
         rocketsFiltered = sortRocketsByNewest(rocketsFiltered);
       }
-      if (dateFilter === 'oldest') {
+      if (dateFilter === "oldest") {
         rocketsFiltered = sortRocketsByOldest(rocketsFiltered);
       }
-      if (status === 'active') {
+      if (status === "active") {
         rocketsFiltered = sortRocketsByActive(rocketsFiltered);
       }
-      if (status === 'inactive') {
+      if (status === "inactive") {
         rocketsFiltered = sortRocketsByInactive(rocketsFiltered);
       }
-      if (status === 'all') {
+      if (status === "all") {
         rocketsFiltered = sortRocketsByAll(rocketsFiltered);
       }
     }
-    if (date !== '') {
-      if (date === 'newest') {
+    if (date !== "") {
+      if (date === "newest") {
         rocketsFiltered = sortRocketsByNewest(rocketsFiltered);
       }
-      if (date === 'oldest') {
+      if (date === "oldest") {
         rocketsFiltered = sortRocketsByOldest(rocketsFiltered);
       }
-      if (statusFilter === 'active') {
+      if (statusFilter === "active") {
         rocketsFiltered = sortRocketsByActive(rocketsFiltered);
       }
-      if (statusFilter === 'inactive') {
+      if (statusFilter === "inactive") {
         rocketsFiltered = sortRocketsByInactive(rocketsFiltered);
       }
-      if (statusFilter === 'all') {
+      if (statusFilter === "all") {
         rocketsFiltered = sortRocketsByAll(rocketsFiltered);
       }
     }
     setDisplayedRockets(rocketsFiltered);
   };
   const sortRocketsByActive = rocketsFiltered => {
-    console.log('sortrocketsByActive');
+    console.log("sortrocketsByActive");
     rocketsFiltered = rocketsFiltered.filter(rocket => rocket.active);
-    console.log('by active rockets: ', rocketsFiltered);
+    console.log("by active rockets: ", rocketsFiltered);
     return rocketsFiltered;
   };
   const sortRocketsByInactive = rocketsFiltered => {
-    console.log('sortrocketsByInactive');
-    console.log('rockets filtered: ', rocketsFiltered);
+    console.log("sortrocketsByInactive");
+    console.log("rockets filtered: ", rocketsFiltered);
     rocketsFiltered = rocketsFiltered.filter(rocket => !rocket.active);
-    console.log('by inactive rockets: ', rocketsFiltered);
+    console.log("by inactive rockets: ", rocketsFiltered);
     return rocketsFiltered;
   };
   const sortRocketsByAll = rocketsFiltered => {
-    console.log('sortrocketsByAll');
-    console.log('by all rockets: ', rocketsFiltered);
+    console.log("sortrocketsByAll");
+    console.log("by all rockets: ", rocketsFiltered);
     return rocketsFiltered;
   };
   const sortRocketsByOldest = () => {
-    console.log('sortrocketsByOldest');
-    setDateFilter('oldest');
+    console.log("sortrocketsByOldest");
+    setDateFilter("oldest");
     let sortedArray = [...rockets];
     sortedArray.sort((a, b) => {
-      const dateA = moment__WEBPACK_IMPORTED_MODULE_6___default()(a.first_flight, 'YYYY-MM-DD');
-      const dateB = moment__WEBPACK_IMPORTED_MODULE_6___default()(b.first_flight, 'YYYY-MM-DD');
+      const dateA = moment__WEBPACK_IMPORTED_MODULE_6___default()(a.first_flight, "YYYY-MM-DD");
+      const dateB = moment__WEBPACK_IMPORTED_MODULE_6___default()(b.first_flight, "YYYY-MM-DD");
       return dateA.diff(dateB);
     });
 
     // setDisplayedRockets(sortedArray);
 
-    console.log('by oldest rockets: ', sortedArray);
+    console.log("by oldest rockets: ", sortedArray);
     return sortedArray;
   };
   const sortRocketsByNewest = () => {
-    console.log('sortrocketsByNewest');
-    setDateFilter('newest');
+    console.log("sortrocketsByNewest");
+    setDateFilter("newest");
     let sortedArray = [...rockets];
     sortedArray.sort((a, b) => {
-      const dateA = moment__WEBPACK_IMPORTED_MODULE_6___default()(a.first_flight, 'YYYY-MM-DD');
-      const dateB = moment__WEBPACK_IMPORTED_MODULE_6___default()(b.first_flight, 'YYYY-MM-DD');
+      const dateA = moment__WEBPACK_IMPORTED_MODULE_6___default()(a.first_flight, "YYYY-MM-DD");
+      const dateB = moment__WEBPACK_IMPORTED_MODULE_6___default()(b.first_flight, "YYYY-MM-DD");
       return dateB.diff(dateA);
     });
-    console.log('by newest rockets: ', sortedArray);
+    console.log("by newest rockets: ", sortedArray);
     return sortedArray;
   };
   const getRocketsData = () => {
-    console.log('get rockets data');
+    console.log("get rockets data");
     // apiFetch( { path: '/wp-json/custom-plugin/v1/spacex-rockets' } ).then( ( rockets ) => {
-    _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_2___default()({
-      url: 'http://localhost/wp-json/custom-plugin/v1/spacex-rockets'
-    }).then(rocketsData => {
-      console.log('fetched rockets data: ', rocketsData);
-      console.log('rocketsData.length > 0 ?: ', rocketsData.length > 0);
-      if (rocketsData.length > 0) {
-        setRockets(rocketsData);
-        setDisplayedRockets(rocketsData);
-        console.log('setRockets executed.');
-        // setAttributes({ data: rocketsData });
-        // console.log('setAttributes executed.');
-      }
-    });
+    try {
+      _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_2___default()({
+        url: "http://localhost/wp-json/custom-plugin/v1/spacex-rockets"
+      }).then(rocketsData => {
+        console.log("fetched rockets data: ", rocketsData);
+        console.log("rocketsData.length > 0 ?: ", rocketsData.length > 0);
+        if (rocketsData.length > 0) {
+          setRockets(rocketsData);
+          setDisplayedRockets(rocketsData);
+          console.log("setRockets executed.");
+          // setAttributes({ data: rocketsData });
+          // console.log('setAttributes executed.');
+        }
+      }).catch(error => {
+        console.log("There has been an error: ", error);
+        if (error.data.status === 401) {
+          console.log("Unauthorized access. Login is needed.");
+          setUserLoggedIn(false);
+        }
+      });
+    } catch (error) {
+      // console.log('------------- error -------------');
+      // console.log('error on fetching data: ', error);
+    }
   };
-
   (0,react__WEBPACK_IMPORTED_MODULE_4__.useEffect)(() => {
     getRocketsData();
   }, []);
@@ -27249,7 +27260,7 @@ const App = () => {
   // value={selectedHoraDesde}
   , {
     onChange: e => handleDateFilterChange(e),
-    placeholder: 'Launch date:',
+    placeholder: "Launch date:",
     options: optionsLaunchDate,
     isSearchable: false,
     maxMenuHeight: 240,
@@ -27259,15 +27270,15 @@ const App = () => {
       borderRadius: 10,
       colors: {
         ...theme.colors,
-        primary25: '#8FD5FF',
-        primary: 'black'
+        primary25: "#8FD5FF",
+        primary: "black"
       }
     })
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_select__WEBPACK_IMPORTED_MODULE_7__["default"]
   // value={selectedHoraDesde}
   , {
     onChange: e => handleStatusFilterChange(e),
-    placeholder: 'Status:',
+    placeholder: "Status:",
     isSearchable: false,
     options: optionsStatus,
     maxMenuHeight: 240,
@@ -27277,8 +27288,8 @@ const App = () => {
       borderRadius: 10,
       colors: {
         ...theme.colors,
-        primary25: '#8FD5FF',
-        primary: 'black'
+        primary25: "#8FD5FF",
+        primary: "black"
       }
     })
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Paginate__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -27290,14 +27301,15 @@ const App = () => {
   }), currentPosts.length > 0 ? (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "grid grid-cols-2 gap-5"
   }, currentPosts.map(rocket => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "my-5"
+    className: "my-5",
+    key: rocket.id
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_RocketCard__WEBPACK_IMPORTED_MODULE_3__["default"], {
     rocket: rocket
-  })))) : (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, "Loading rockets data, please wait..."));
+  })))) : userLoggedIn ? (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, "Loading rockets data, please wait...") : (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, "Unauthorized access to rockets data, please log in to your account."));
 };
 _wordpress_dom_ready__WEBPACK_IMPORTED_MODULE_1___default()(function () {
   // alert('dom ready');
-  const container = document.querySelector('#app');
+  const container = document.querySelector("#app");
   (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.render)((0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(App, null), container);
 });
 }();

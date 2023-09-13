@@ -1,0 +1,25 @@
+{
+	"plugins": ["prettier", "import"],
+	"rules": {
+		"prettier/prettier": ["error"],
+		"react/prop-types": "off"
+	},
+	"extends": [
+		"prettier",
+		"plugin:react/recommended",
+		"plugin:react/jsx-runtime"
+	],
+	"parser": "@babel/eslint-parser",
+	"parserOptions": {
+		"ecmaVersion": 2021,
+		"requireConfigFile": false,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true,
+			"modules": true
+		},
+		"babelOptions": {
+			"presets": ["@babel/preset-react"]
+		}
+	}
+}

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @package Hello_Dolly
  * @version 1.7.2
@@ -12,7 +13,8 @@ Version: 1.7.2
 Author URI: http://ma.tt/
 */
 
-function hello_dolly_get_lyric() {
+function hello_dolly_get_lyric()
+{
 	/** These are the lyrics to Hello Dolly */
 	$lyrics = "Hello, Dolly
 Well, hello, Dolly
@@ -43,33 +45,35 @@ Promise, you'll never go away
 Dolly'll never go away again";
 
 	// Here we split it into lines.
-	$lyrics = explode( "\n", $lyrics );
+	$lyrics = explode("\n", $lyrics);
 
 	// And then randomly choose a line.
-	return wptexturize( $lyrics[ mt_rand( 0, count( $lyrics ) - 1 ) ] );
+	return wptexturize($lyrics[mt_rand(0, count($lyrics) - 1)]);
 }
 
 // This just echoes the chosen line, we'll position it later.
-function hello_dolly() {
+function hello_dolly()
+{
 	$chosen = hello_dolly_get_lyric();
 	$lang   = '';
-	if ( 'en_' !== substr( get_user_locale(), 0, 3 ) ) {
+	if ('en_' !== substr(get_user_locale(), 0, 3)) {
 		$lang = ' lang="en"';
 	}
 
 	printf(
 		'<p id="dolly"><span class="screen-reader-text">%s </span><span dir="ltr"%s>%s</span></p>',
-		__( 'Quote from Hello Dolly song, by Jerry Herman:' ),
+		__('Quote from Hello Dolly song, by Jerry Herman:'),
 		$lang,
 		$chosen
 	);
 }
 
 // Now we set that function up to execute when the admin_notices action is called.
-add_action( 'admin_notices', 'hello_dolly' );
+add_action('admin_notices', 'hello_dolly');
 
 // We need some CSS to position the paragraph.
-function dolly_css() {
+function dolly_css()
+{
 	echo "
 	<style type='text/css'>
 	#dolly {
@@ -97,4 +101,4 @@ function dolly_css() {
 	";
 }
 
-add_action( 'admin_head', 'dolly_css' );
+add_action('admin_head', 'dolly_css');
