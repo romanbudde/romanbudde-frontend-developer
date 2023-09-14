@@ -32,7 +32,10 @@ import "./editor.scss";
 export default function Edit() {
 	return (
 		<p {...useBlockProps()}>
-			{__("Rockets Block – hello from the editorr!", "rockets-block")}
+			{__(
+				"Rockets Block - Blocks displayed in a paginated grid, fetched from SpaceX public API",
+				"rockets-block",
+			)}
 		</p>
 	);
 }
