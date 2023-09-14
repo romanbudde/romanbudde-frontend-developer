@@ -162,7 +162,6 @@ const App = () => {
 
 	return (
 		<div>
-			React app
 			<div className="flex flex-row">
 				<Select
 					// value={selectedHoraDesde}
