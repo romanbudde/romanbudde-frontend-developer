@@ -52,9 +52,6 @@ const App = () => {
 	};
 
 	const sortRockets = (date, status) => {
-		console.log("dateFilter: ", date);
-		console.log("statusFilter: ", status);
-
 		let rocketsFiltered = [];
 
 		if (status !== "") {
@@ -99,37 +96,22 @@ const App = () => {
 	};
 
 	const sortRocketsByActive = (rocketsFiltered) => {
-		console.log("sortrocketsByActive");
-
 		rocketsFiltered = rocketsFiltered.filter((rocket) => rocket.active);
-
-		console.log("by active rockets: ", rocketsFiltered);
 
 		return rocketsFiltered;
 	};
 
 	const sortRocketsByInactive = (rocketsFiltered) => {
-		console.log("sortrocketsByInactive");
-		console.log("rockets filtered: ", rocketsFiltered);
-
 		rocketsFiltered = rocketsFiltered.filter((rocket) => !rocket.active);
-
-		console.log("by inactive rockets: ", rocketsFiltered);
 
 		return rocketsFiltered;
 	};
 
 	const sortRocketsByAll = (rocketsFiltered) => {
-		console.log("sortrocketsByAll");
-
-		console.log("by all rockets: ", rocketsFiltered);
-
 		return rocketsFiltered;
 	};
 
 	const sortRocketsByOldest = () => {
-		console.log("sortrocketsByOldest");
-
 		setDateFilter("oldest");
 
 		let sortedArray = [...rockets];
@@ -140,16 +122,10 @@ const App = () => {
 			return dateA.diff(dateB);
 		});
 
-		// setDisplayedRockets(sortedArray);
-
-		console.log("by oldest rockets: ", sortedArray);
-
 		return sortedArray;
 	};
 
 	const sortRocketsByNewest = () => {
-		console.log("sortrocketsByNewest");
-
 		setDateFilter("newest");
 
 		let sortedArray = [...rockets];
@@ -160,40 +136,24 @@ const App = () => {
 			return dateB.diff(dateA);
 		});
 
-		console.log("by newest rockets: ", sortedArray);
-
 		return sortedArray;
 	};
 
 	const getRocketsData = () => {
-		console.log("get rockets data");
-		// apiFetch( { path: '/wp-json/custom-plugin/v1/spacex-rockets' } ).then( ( rockets ) => {
-		try {
-			apiFetch({
-				url: "http://localhost/wp-json/custom-plugin/v1/spacex-rockets",
+		apiFetch({
+			url: "http://localhost/wp-json/custom-plugin/v1/spacex-rockets",
+		})
+			.then((rocketsData) => {
+				if (rocketsData.length > 0) {
+					setRockets(rocketsData);
+					setDisplayedRockets(rocketsData);
+				}
 			})
-				.then((rocketsData) => {
-					console.log("fetched rockets data: ", rocketsData);
-					console.log("rocketsData.length > 0 ?: ", rocketsData.length > 0);
-					if (rocketsData.length > 0) {
-						setRockets(rocketsData);
-						setDisplayedRockets(rocketsData);
-						console.log("setRockets executed.");
-						// setAttributes({ data: rocketsData });
-						// console.log('setAttributes executed.');
-					}
-				})
-				.catch((error) => {
-					console.log("There has been an error: ", error);
-					if (error.data.status === 401) {
-						console.log("Unauthorized access. Login is needed.");
-						setUserLoggedIn(false);
-					}
-				});
-		} catch (error) {
-			// console.log('------------- error -------------');
-			// console.log('error on fetching data: ', error);
-		}
+			.catch((error) => {
+				if (error.data.status === 401) {
+					setUserLoggedIn(false);
+				}
+			});
 	};
 
 	useEffect(() => {
@@ -249,7 +209,7 @@ const App = () => {
 				setCurrentPage={setCurrentPage}
 			/>
 			{currentPosts.length > 0 ? (
-				<div className="grid grid-cols-2 gap-5">
+				<div className="grid grid-cols-2 gap-5" id="rockets-grid">
 					{currentPosts.map((rocket) => (
 						<div className="my-5" key={rocket.id}>
 							<RocketCard rocket={rocket} />

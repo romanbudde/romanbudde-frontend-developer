@@ -10,9 +10,6 @@ import {
 import { __, sprintf } from "@wordpress/i18n";
 
 const RocketModal = ({ show, onClose, rocket }) => {
-	console.log("inside rocket modal");
-	console.log("rocket clicked: ", rocket);
-
 	if (!show) return null;
 
 	return (

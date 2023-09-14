@@ -2767,6 +2767,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+// import noImage from "./images/image_not_available.png";
 // import MoonLoader from "react-spinners/ClipLoader";
 
 const RocketCard = ({
@@ -2780,13 +2781,17 @@ const RocketCard = ({
     setShowEditModal(false);
   };
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_1__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "bg-gradient-to-b from-gray-300 to-gray-100 p-5 rounded-md shadow-md cursor-pointer hover:scale-105 transition",
+    className: "bg-gradient-to-b from-gray-300 to-gray-100 p-5 rounded-md shadow-md cursor-pointer hover:scale-105 transition rocket-card",
     onClick: handleShow
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
     className: "text-lg font-semibold mb-5"
-  }, rocket.name), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
+  }, rocket.name), rocket.flickr_images[0] ? (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
     src: rocket.flickr_images[0]
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
+  }) :
+  // <img src={noImage}></img>
+  (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+    className: "text-sm"
+  }, "Sorry! No image available for this rocket."), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
     className: "show-rocket-info-btn text-sm text-gray-600"
   }, "Show more info")), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_RocketModal__WEBPACK_IMPORTED_MODULE_2__["default"], {
     show: showEditModal,
@@ -27299,7 +27304,8 @@ const App = () => {
     currentPage: currentPage,
     setCurrentPage: setCurrentPage
   }), currentPosts.length > 0 ? (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "grid grid-cols-2 gap-5"
+    className: "grid grid-cols-2 gap-5",
+    id: "rockets-grid"
   }, currentPosts.map(rocket => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "my-5",
     key: rocket.id
