@@ -164,7 +164,6 @@ const App = () => {
 		<div>
 			<div className="flex flex-row">
 				<Select
-					// value={selectedHoraDesde}
 					onChange={(e) => handleDateFilterChange(e)}
 					placeholder={"Launch date:"}
 					options={optionsLaunchDate}
@@ -182,7 +181,6 @@ const App = () => {
 					})}
 				/>
 				<Select
-					// value={selectedHoraDesde}
 					onChange={(e) => handleStatusFilterChange(e)}
 					placeholder={"Status:"}
 					isSearchable={false}
