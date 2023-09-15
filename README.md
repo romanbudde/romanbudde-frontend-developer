@@ -47,9 +47,10 @@ Secondly, here are the steps necessary to set it up and running:
   npm install  
   npm start  
 - go to any post and add the block called 'Rockets Block'.  
-- save/publish the post and open it on the frontend, it should be displaying the paginated grid of rockets (for logged in users only).  
-The main tech stack used was:  
+- save/publish the post and open it on the frontend, it should be displaying the paginated grid of rockets (for logged in users only).
 
+
+The main tech stack used was:  
 - gutenberg block (react js)  
 - @wordpress/api-fetch to communicate with the WP API from the block.  
 - @wordpress/scripts for the build process.  
