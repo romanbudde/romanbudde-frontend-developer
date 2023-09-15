@@ -17,15 +17,17 @@ A good-looking, pixel-perfect design for the block grid of capsules will showcas
 
 The block must have 2 features: A search form, and data grid.  
 For the search form:  
-  Having three search filters would be excellent. For example: User can search Capsules by status, original_launch, and type (there is no type attribute in rockets, just in capsules)  
-  Deliver a good user experience  
-  Fully functional search form without bugs  
-  Optimized search query to deliver quick results.  
+  - Having three search filters would be excellent. For example: User can search Capsules by status, original_launch, and type (there is no type attribute in rockets, just in capsules)  
+  - Deliver a good user experience  
+  - Fully functional search form without bugs  
+  - Optimized search query to deliver quick results.
+
+
 For the data grid:  
-  Elegant design  
-  Display the right amount of data  
-  Paginated data grid, shows 2 rockets per page.  
-  When clicking on the item, it displays the item data in the popup.  
+  - Elegant design  
+  - Display the right amount of data  
+  - Paginated data grid, shows 2 rockets per page.  
+  - When clicking on the item, it displays the item data in the popup.  
 
   
 The design needs to be responsive for all screen sizes and different browsers.  
