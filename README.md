@@ -1,5 +1,6 @@
 # romanbudde-frontend-developer
-[![Video of the plugin]](https://www.veed.io/view/e10295b0-8f75-4a51-8f99-b924699b66e4?panel=share)
+[Video of the plugin](https://www.veed.io/view/e10295b0-8f75-4a51-8f99-b924699b66e4?panel=share)  
+
 Technical Assessment  
 
 The plugin I've developed is called 'rockets-block'.  
