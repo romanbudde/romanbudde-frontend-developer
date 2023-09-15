@@ -15,16 +15,19 @@ Create a WordPress REST API endpoint to fetch & send data in between SpaceX & yo
 The request to the SpaceX API should be done on the WordPress server and returned through the WordPress API endpoint.  
 A good-looking, pixel-perfect design for the block grid of capsules will showcase the design skills.  
 
-The block must have 2 features: A search form, and data grid. For the search form
+The block must have 2 features: A search form, and data grid.  
+For the search form:  
+  Having three search filters would be excellent. For example: User can search Capsules by status, original_launch, and type (there is no type attribute in rockets, just in capsules)  
+  Deliver a good user experience  
+  Fully functional search form without bugs  
+  Optimized search query to deliver quick results.  
+For the data grid:  
+  Elegant design  
+  Display the right amount of data  
+  Paginated data grid, shows 2 rockets per page.  
+  When clicking on the item, it displays the item data in the popup.  
 
-Having three search filters would be excellent. Example: User can search Capsules by status, original_launch, and type (there is no type attribute in rockets, just in capsules)  
-Deliver a good user experience  
-Fully functional search form without bugs  
-Optimized search query to deliver quick results For the data grid  
-Elegant design  
-Display the right amount of data  
-Paginated data grid, shows 2 rockets per page.  
-When clicking on the item, it displays the item data in the popup.  
+  
 The design needs to be responsive for all screen sizes and different browsers.  
 Use of Semantic HTML & SEO best practices is appreciated.  
 Creating test cases for the code is not required, but it will take your assignment to another level.  
